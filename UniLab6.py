@@ -5,54 +5,54 @@ from pprint import pprint
 while True:
     
     checker = False
-    primaryChoice = input("Выбор задания для проверки : \n1)\n2)\n3)\n4) - Выход\nВыбор : ")
+    primaryChoice = input("Р’С‹Р±РѕСЂ Р·Р°РґР°РЅРёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё : \n1)\n2)\n3)\n4) - Р’С‹С…РѕРґ\nР’С‹Р±РѕСЂ : ")
     if [num for num in primaryChoice if num not in ".,/*-+1234567890"]: checker = True
     if checker == True:
-        print("Так нельзя")
+        print("РўР°Рє РЅРµР»СЊР·СЏ")
         break
     primaryChoice = int(primaryChoice)
     
     if primaryChoice == 1:
-        countries = {'Россия':'Москва',  'Беларусь':'Минск', 'Италия':'Рим'}
+        countries = {'Р РѕСЃСЃРёСЏ':'РњРѕСЃРєРІР°',  'Р‘РµР»Р°СЂСѓСЃСЊ':'РњРёРЅСЃРє', 'РС‚Р°Р»РёСЏ':'Р РёРј'}
         x = len(countries)
         pprint(countries)
-        print(countries['Россия'])
+        print(countries['Р РѕСЃСЃРёСЏ'])
         countries = sorted(countries)
         pprint(countries)
     
     if primaryChoice == 2:
         superCounter = 0
-        word = input("Введите слово для проверки : ")
+        word = input("Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ РґР»СЏ РїСЂРѕРІРµСЂРєРё : ")
         word = word.lower()
-        if [letter for letter in word if letter in "авеинорст"]: superCounter = superCounter + 1
-        if [letter for letter in word if letter in "дклмпу"]: superCounter = superCounter + 2
-        if [letter for letter in word if letter in "бгёья"]: superCounter = superCounter + 3
-        if [letter for letter in word if letter in "йы"]: superCounter = superCounter + 4
-        if [letter for letter in word if letter in "жзхцч"]: superCounter = superCounter + 5
-        if [letter for letter in word if letter in "шэю"]: superCounter = superCounter + 8
-        if [letter for letter in word if letter in "фщъ"]: superCounter = superCounter + 10
-        print("Слово набирает, ", superCounter)
+        if [letter for letter in word if letter in "Р°РІРµРёРЅРѕСЂСЃС‚"]: superCounter = superCounter + 1
+        if [letter for letter in word if letter in "РґРєР»РјРїСѓ"]: superCounter = superCounter + 2
+        if [letter for letter in word if letter in "Р±РіС‘СЊСЏ"]: superCounter = superCounter + 3
+        if [letter for letter in word if letter in "Р№С‹"]: superCounter = superCounter + 4
+        if [letter for letter in word if letter in "Р¶Р·С…С†С‡"]: superCounter = superCounter + 5
+        if [letter for letter in word if letter in "С€СЌСЋ"]: superCounter = superCounter + 8
+        if [letter for letter in word if letter in "С„С‰СЉ"]: superCounter = superCounter + 10
+        print("РЎР»РѕРІРѕ РЅР°Р±РёСЂР°РµС‚, ", superCounter)
      
     if primaryChoice == 3:
         studentLanguages = {
-            'Иван': ['английский', 'французский', 'немецкий'],
-            'Мария': ['английский', 'китайский'],
-            'Петр': ['французский', 'испанский'],
-            'Анна': ['английский', 'китайский', 'испанский'],
-            'Алексей': ['китайский', 'немецкий']}
+            'РРІР°РЅ': ['Р°РЅРіР»РёР№СЃРєРёР№', 'С„СЂР°РЅС†СѓР·СЃРєРёР№', 'РЅРµРјРµС†РєРёР№'],
+            'РњР°СЂРёСЏ': ['Р°РЅРіР»РёР№СЃРєРёР№', 'РєРёС‚Р°Р№СЃРєРёР№'],
+            'РџРµС‚СЂ': ['С„СЂР°РЅС†СѓР·СЃРєРёР№', 'РёСЃРїР°РЅСЃРєРёР№'],
+            'РђРЅРЅР°': ['Р°РЅРіР»РёР№СЃРєРёР№', 'РєРёС‚Р°Р№СЃРєРёР№', 'РёСЃРїР°РЅСЃРєРёР№'],
+            'РђР»РµРєСЃРµР№': ['РєРёС‚Р°Р№СЃРєРёР№', 'РЅРµРјРµС†РєРёР№']}
         
         allLanguages = set()
         chineseKnowers = []
         
         for student, languages in studentLanguages.items():
             allLanguages.update(languages)
-            if 'китайский' in languages:
+            if 'РєРёС‚Р°Р№СЃРєРёР№' in languages:
                 chineseKnowers.append(student)
                 
         allLanguages = sorted(allLanguages)
         
-        print("Все языки ", allLanguages)
-        print("Студенты с Китайским ", chineseKnowers)        
+        print("Р’СЃРµ СЏР·С‹РєРё ", allLanguages)
+        print("РЎС‚СѓРґРµРЅС‚С‹ СЃ РљРёС‚Р°Р№СЃРєРёРј ", chineseKnowers)        
         
     if primaryChoice == 4:
         break
